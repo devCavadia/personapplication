@@ -1,0 +1,31 @@
+
+
+.powered {
+  background-color: rgb(65, 65, 68);
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 4%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  align-items: end;
+  position: absolute;
+  bottom: 0;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar{
+    background-color: rgb(167, 167, 184);
+    width: 20%;
+    height: 100vh;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

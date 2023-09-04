@@ -1,0 +1,309 @@
+=================== Creación de base de datos en MySQL ========================
+
+CREATE DATABASE IF NOT EXISTS person character set utf8mb4 collate utf8mb4_0900_ai_ci;
+DROP USER if EXISTS person@localhost;
+create user person@localhost identified by 'Demo1234.';
+grant all privileges on person.* to person@localhost;
+
+===================== Dependencias front instaladas ===========================
+
+Boostrap:        npm i react-bootstrap
+
+Font_awesome:    npm i --save @fortawesome/fontawesome-svg-core
+				 npm i --save @fortawesome/free-solid-svg-icons
+				 npm i --save @fortawesome/free-regular-svg-icons
+				 npm i --save @fortawesome/react-fontawesome@latest
+
+react-router:    npm i react-router-dom
+
+axios: 			 npm i axios
+
+
+================================ Endpoints ====================================
+GET:
+http://129.153.211.34:8080/api/person/all
+http://129.153.211.34:8080/api/professor/all
+http://129.153.211.34:8080/api/student/all
+http://129.153.211.34:8080/api/address/all
+
+POST:
+http://129.153.211.34:8080/api/person/add
+http://129.153.211.34:8080/api/professor/add
+http://129.153.211.34:8080/api/student/add
+http://129.153.211.34:8080/api/address/add
+
+PUT:
+http://129.153.211.34:8080/api/person/upd
+http://129.153.211.34:8080/api/professor/upd
+http://129.153.211.34:8080/api/student/upd
+http://129.153.211.34:8080/api/address/upd
+
+DELETE:
+http://129.153.211.34:8080/api/person/del/{id}
+http://129.153.211.34:8080/api/professor/del/{id}
+http://129.153.211.34:8080/api/student/del/{id}
+http://129.153.211.34:8080/api/address/del/{id}
+
+================================ Casos de prueba =================================
+=================================== Personas =====================================
+
+{
+	"name": "Luis Arturo Robles Gomez",
+	"emailAddress": "luchito@gmail.com"
+}
+
+{
+	"name": "Mariano Ospina Perez",
+	"emailAddress": "mospina@hotmail.com"
+}
+
+{
+	"name": "Ramiro Jesus Valbuena Jimenez",
+	"emailAddress": "ramiro@gmail.com"
+}
+
+{
+	"name": "Jose Mauricio Lima Luna",
+	"emailAddress": "jlima@outlook.com"
+}
+
+{
+	"name": "Juan Alfredo Carrascal",
+	"emailAddress": "jalca@gmail.com"
+}
+
+================================ Profesores ===================================
+
+{
+	"name": "Martin Avellaneda Castro",
+	"emailAddress": "martin@gmail.com",
+	"salary": 53000
+}
+
+{
+	"name": "Elvin Razola Cuello",
+	"emailAddress": "elpo@hotmail.com",
+	"salary": 25000
+}
+
+{
+	"name": "Juan Enrique Gomez Castro",
+	"emailAddress": "juansito@gmail.com",
+	"salary": 38000
+}
+
+{
+	"name": "Nora De La Peña Sierra",
+	"emailAddress": "npena@outlook.com",
+	"salary": 45000
+}
+
+{
+	"name": "Alex Castillo Sierra",
+	"emailAddress": "alex@gmail.com",
+	"salary": 45000
+}
+
+================================ Estudiantes ===================================
+
+{
+	"name": "Camila Luna Montalvo",
+	"emailAddress": "camilita@outlook.com",
+	"studentNumber": 28,
+	"averageMark": 10.4
+}
+
+{
+	"name": "Maria Patricia Maestro",
+	"emailAddress": "mayi@gmail.com",
+	"studentNumber": 32,
+	"averageMark": 12.3
+}
+
+{
+	"name": "Juan Pablo Gonzalez Arrieta",
+	"emailAddress": "jpablo@hotmail.com",
+	"studentNumber": 41,
+	"averageMark": 15.8
+}
+
+{
+	"name": "Emilio Jattin Cortazar",
+	"emailAddress": "emilio@hotmail.com",
+	"studentNumber": 32,
+	"averageMark": 11.7
+}
+
+{
+	"name": "Pablo Calvillo Lopez",
+	"emailAddress": "pablito@outlook.com",
+	"studentNumber": 28,
+	"averageMark": 14.8
+}
+
+=============================== Direcciones ==================================
+
+{
+	"street": "El viajero",
+	"city": "Riohacha",
+	"state": "La Guajira",
+	"postalCode": 2008746,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 1
+	}
+}
+
+{
+	"street": "La Pajuela",
+	"city": "Sincelejo",
+	"state": "Sucre",
+	"postalCode": 1903948,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 2
+	}
+}
+
+{
+	"street": "Calle del comercio",
+	"city": "Monteria",
+	"state": "Cordoba",
+	"postalCode": 1904893,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 3
+	}
+}
+
+{
+	"street": "Suri Salcedo",
+	"city": "Barranquilla",
+	"state": "Atlantico",
+	"postalCode": 1902227,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 4
+	}
+}
+
+{
+	"street": "El Bagre",
+	"city": "Lorica",
+	"state": "Cordoba",
+	"postalCode": 1902324,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 5
+	}
+}
+
+{
+	"street": "La cariñosa",
+	"city": "Santo Tomas",
+	"state": "Atlantico",
+	"postalCode": 1902219,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 6
+	}
+}
+
+{
+	"street": "El buen gusto",
+	"city": "Cerete",
+	"state": "Cordoba",
+	"postalCode": 1902365,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 7
+	}
+}
+
+{
+	"street": "Julio Florez",
+	"city": "Tunja",
+	"state": "Boyaca",
+	"postalCode": 1865321,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 8
+	}
+}
+
+{
+	"street": "La precisa",
+	"city": "San Pelayo",
+	"state": "Córdoba",
+	"postalCode": 2675123,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 9
+	}
+}
+
+{
+	"street": "No te pases",
+	"city": "Sahagun",
+	"state": "Cordoba",
+	"postalCode": 1728326,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 10
+	}
+}
+
+{
+	"street": "La esquina Caliente",
+	"city": "Chinu",
+	"state": "Cordoba",
+	"postalCode": 1823617,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 11
+	}
+}
+
+{
+	"street": "Brasilia",
+	"city": "Sincelejo",
+	"state": "Sucre",
+	"postalCode": 7384726,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 12
+	}
+}
+
+{
+	"street": "Montessori",
+	"city": "Mompox",
+	"state": "Bolivar",
+	"postalCode": 7364726,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 13
+	}
+}
+
+{
+	"street": "La espinera",
+	"city": "Magangue",
+	"state": "Bolivar",
+	"postalCode": 1908352,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 14
+	}
+}
+
+{
+	"street": "El flechazo",
+	"city": "Pamplona",
+	"state": "Santander",
+	"postalCode": 1835642,
+	"country": "Colombia",
+	"person": {
+		"idPerson": 15
+	}
+}
